@@ -1,189 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Preseed Projects</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <!-- Le styles -->
-        <link href="file:///C|/Program%20Files/Adobe/Adobe%20Dreamweaver%20CS6/Configuration/BuiltIn/Fluid%20Grid%20Layout/boilerplate.css" rel="stylesheet" type="text/css">
-        <link href="file:///E|/fluid-update/assets/css/org-fluid.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/bootstrap.css" rel="stylesheet">
-        <link href="assets/css/docs.css" rel="stylesheet">
-        <link href="assets/css/bootstrap-theme.css" rel="stylesheet">
-        <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
-        <link href="assets/css/carousel.css" rel="stylesheet">
-        <link href="fa/css/foaw.css" rel="stylesheet">
-	<link href="fa/css/foaw1.css" rel="stylesheet">
-    
-    <!-- Le fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
-                                   
-        <style type="text/css">
-        body {
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preseed Projects</title>
+<link href="boilerplate.css" rel="stylesheet" type="text/css">
+<link href="demo.css" rel="stylesheet" type="text/css">
+<link href="demo_container.css" rel="stylesheet" type="text/css">
+<link href="sticky-navigation.css" rel="stylesheet" type="text/css">
+<link href="index.css" rel="stylesheet" type="text/css">
+<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+<link href="assets/css/docs.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body {
 	background-color: #000033;
 }
-        </style>
-        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.min.js">
-        </script>
-        
-        <script>
-            $(document).ready(function(){
-                $("button").click(function(){
-                    $("#sform").fadeIn("slow");
-                    });
-                $("#a11").hide();
-                $("#hid").click(function(){
+</style>
+<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#003; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+body,td,th {
+	color: #000;
+}
+</style>
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 
-
-                });
-                });
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="respond.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(function() {
+ 
+    // grab the initial top offset of the navigation 
+    var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
+     
+    // our function that decides weather the navigation bar should have "fixed" css position or not.
+    var sticky_navigation = function(){
+        var scroll_top = $(window).scrollTop(); // our current vertical position from the top
+         
+        // if we've scrolled more than the navigation, change its position to fixed to stick to top,
+        // otherwise change it back to relative
+        if (scroll_top > sticky_navigation_offset_top) { 
+            $('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0 });
+        } else {
+            $('#sticky_navigation').css({ 'position': 'relative' }); 
+        }   
+    };
+     
+    // run our function on load
+    sticky_navigation();
+     
+    // and run it again every time you scroll
+    $(window).scroll(function() {
+         sticky_navigation();
+    });
+ 
+});
 </script>
-        
-      <script src="file:///C|/Program%20Files/Adobe/Adobe%20Dreamweaver%20CS6/Configuration/BuiltIn/Fluid%20Grid%20Layout/respond.min.js"></script>  
-      
-<link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-    </head>
-
-    <body class="" >
-     <div class="navbar-wrapper">
-      <div class="container">
-
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-			     <a class="nav navbar-nav navbar-left"><img src="og1.png" style="padding-top:10px"></a>
-            </div>
-            <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li ><a href="http://preseed.in" target="_blank">Home</a></li>
-                <li><a href="http://weblab.preseed.in" target="_blank">Web Lab</a></li>
-		<li><a href="http://anythinglab.preseed.in" target="_blank">Anything Lab</a></li>
-		<li><a href="http://anythinglab.preseed.in/projects/prefund/" target="_blank">Prefund</a></li>
-                <li><a href="http://anythinglab.preseed.in/projects/tsf/" target="_blank">TSF</a></li>
-                 <!--<li><a href="http://anythinglab.preseed.in/projects/4consult/">4Consult</a></li>-->
-				  <!--<li><a href="http://preseed.in/#Media-Network">Media Network</a></li> -->
-			<li ><a href="https://medium.com/@Nishchal/collections" target="_blank"><img src="med1.png" width="16" height="16" alt="medium"></a></li>
-			<li><a href="http://blog.preseed.in" target="_blank"><i class="fa fa-tumblr fa-inverse" style="font-size:16px;margin-left:6px"></i></a></li>
-			<li><a href="http://www.facebook.com/thepreseed" target="_blank"><i class="fa fa-facebook fa-inverse" style="font-size:16px"></i></a></li>
-			<li><a href="http://twitter.com/thepreseed" target="_blank"><i class="fa fa-twitter fa-inverse" style="font-size:16px; margin-right:8px"></i></a></li>
-
-			
-              </ul>
-            </div>
+</head>
+<body>
+<div class="gridContainer clearfix" style:" padding-left: 0px; padding-right: 0px">
+  <div id="LayoutDiv1">
+    <div id="sticky_navigation_wrapper" class="desktop-only" >
+      <div id="sticky_navigation" >
+            <div class="demo_container">
+                <ul >
+                    <li><a href="http://preseed.in/" target="_blank" ><img src="og1.png" alt="preseed link"></a></li>
+                    <li><a href="http://preseed.in/" target="_blank" >HOME</a></li>
+                    <li><a href="http://weblab.preseed.in/" target="_blank">WebLab</a></li>
+                    <li><a href="http://anythinglab.preseed.in/" target="_blank" target="_blank">AnythingLab</a></li>
+                    <li><a href="http://anythinglab.preseed.in/projects/prefund/" target="_blank">Prefund</a></li>
+                    <li><a href="http://anythinglab.preseed.in/projects/tsf/" target="_blank">TSF</a></li>
+                    <li><a href="https://medium.com/@Nishchal/collections" target="_blank">M</a></li>
+                    <li><a href="http://preseedstuff.tumblr.com/" target="_blank"><img src="tumblr-circle-512.png" alt="tumblr logo"></a></li>
+                    <li><a href="http://www.facebook.com/thepreseed" target="_blank"><img src="Facebook-Grey-256.png" alt="fb logo"></a></li>
+                    <li><a href="http://twitter.com/thepreseed" target="_blank"><img src="Twitter-Grey-200.png" alt="twitter logo"></a></li>
+                </ul>
           </div>
         </div>
-
-      </div>
-    </div>
-<div class="gridContainer clearfix">
-  <div id="LayoutDiv1">
-    <div class="jumbotron col-md-12" align="center">
-            <div class="container">
-                <div class="" align="center">
-                    <!--h1 style="font-size: 120px" class="">preseed projects</h1-->
-                    <img src="assets/proj.png" style="height: 220px;margin-top: 5%;margin-bottom: 5%; padding-top: 0px" ><br>
-                    <br/>
-                    <p style="font-family: 'Open Sans', arial;font-size: 30px;font-weight: 100 ;text-align:centre;margin-left: 9%; margin-right: 9%; margin-top: 3%; margin-bottom: 15%;padding-left:5px; padding-right:5px; padding-top:0px; padding-bottom: 0px;">
+ 
+</div><!-- #demo_top_wrapper -->
+ 
+<!-- some other content should go here, in order to have a scrollbar -->
+  <img src="assets/proj.png" alt="preseed projects logo">
+  <p style="font-family: 'Open Sans', arial;font-size: 30px;font-weight: 100 ;text-align:centre;margin-left: 9%; margin-right: 9%; margin-top: 0%; margin-bottom: 0%;padding-left:30px; padding-right:30px; padding-top:150px; padding-bottom: 100px;">
                         
-                        AT <a href="http://preseed.in" style="font-family: 'Open Sans', arial;font-size: 30px;color:#FF6; target="_blank">PRESEED </a>WE INSPIRE IDEAS, FAITH, AND ACTION. THESE ARE THE EARLIEST RESULTS OF THOSE ACTIONS. THIS IS OUR PORTFOLIO. 
-                  </p>  
-                     <p style="font-family: 'Open Sans', arial;font-size: 25px;font-weight:100 ; margin-left: 11%; margin-right: 11%; margin-top: 5%; margin-bottom: 10%; padding-top: 50px; padding-bottom: 50px ">
-			And here, <strong><a href="https://medium.com/the-preseed/preseed-projects-d298a7091bd9" target="_blank" STYLE="font-size: 23px;COLOR:#FFFFFF"><em>on this post</em></a></strong>, is the inspiring story behind this portfolio. A story that has the power to change the way web products are built in India and how in the process new age entrepreneurs are created.  This is also where we get these minimum viable products and services customer validated and then incubated. <a href="https://medium.com/the-preseed/a60f6fc3cc93" target="_blank" STYLE="COLOR:#FFFFFF; font-size: 20px;"><strong><em> READ MORE</em></strong></a><br><br>The customer validated PRESEED projects may get funded by <a href="http://anythinglab.preseed.in/projects/tsf" target="_blank" STYLE="COLOR:#FFFFFF; font-size: 20px;"><strong><em>THE SIMPLE FUND</em></strong></a> if PRESEED wishes so.                     
-                    </p>
-                   
-                    <span id="sform" style="display: none">
+                        AT <a href="http://preseed.in" style="font-family: 'arial', Open Sans;font-size: 30px;color:#FF6; target="_blank">PRESEED </a>WE INSPIRE IDEAS, FAITH, AND ACTION. THESE ARE THE EARLIEST RESULTS OF THOSE ACTIONS. THIS IS OUR PORTFOLIO. 
+    </p>
+  </div>
+<div id="LayoutDiv3">
+<p style="font-family: 'Open Sans', arial;font-size: 25px;font-weight:100 ; margin-left: 13%; margin-right: 13%; margin-top: 0%; margin-bottom: 0%; padding-top: 60px; ">
+			And, <strong><a href="https://medium.com/the-preseed/preseed-projects-d298a7091bd9" target="_blank" STYLE="font-size: 23px;COLOR:#FF6"><em>on this post</em></a></strong>, is the inspiring story behind this portfolio. A story that has the power to change the way web products are built in India and how in the process new age entrepreneurs are created.  This is where we do anyhing necessary to incubate the teams of Preseed projects as startups in world class incubators and programmes. <br><a href="https://medium.com/the-preseed/a60f6fc3cc93" target="_blank" STYLE="COLOR:#FF6; font-size: 20px;"><strong><em> Read More</em></strong></a><br>
+			<br>The customer validated Preseed projects may get funded by <a href="http://anythinglab.preseed.in/projects/tsf" target="_blank" STYLE="COLOR:#FF6; font-size: 20px;"><strong><em>The simple fund</em></strong></a> if Preseed wishes so.                     
+    </p>
+</div>
+<div id="LayoutDiv4">
+<span id="sform" style="display: none">
                         <iframe style="padding: 15px;margin-left: 20%;margin-right: 20%" class="thumbnail" src="https://docs.google.com/a/preseed.in/forms/d/1U27iRRmKhGlw83m-opvUQYUUlZ8qfQqBTt5AMVua7MI/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-                    </span>
-                    
-                        
-  
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                </div><br/>
-                <div class="container">
+    </span><br>
+                    <div class="container">
 				<div class="panel panel-default" style="padding: 15px;margin-bottom: 4%; margin-top:2% ;margin-left: 20%;margin-right: 20%"> 
-                                        
-                    <img src="assets/todoed.png">
+                    <img src="assets/todoed.jpg">
                  
-                    <p style="color: #000; font-weight: 400; margin-top:5%;">This is our attempt in making people more productive by giving them the simplest todo listing app that can help users do more together with lesser features. This is our first version of that idea. Trust us that the product vision is fundamentally different from any other todo app out there in the world. </p>
-                     <a href="http://weblab.preseed.in/projects/todoed/" target="_blank">weblab.preseed.in/projects/todoed</a><br/>
+                    <p style="color: #000; font-weight: 400; margin-top:5%;">This is our attempt in making people more productive by giving them the simplest todo listing app that can help users do more together with lesser features. This is our first version of that idea. Trust us that the product vision is fundamentally different from any other todo app out there in the world.<br>
+                    COMING SOON!! </p>
+                     <br/>
                      <!--
                      <p style="font-style: italic;font-size: 15px; color:#000000">#WEB #BROWSERPLUGGIN #MVP #PRODUCTIVITY</p>
                      -->
-                </div>
-                </div>
-                
-                <footer class="">
-                    <p style="line-height:1.7; font-size: 20px; margin-top:150px; margin-bottom: 100px"><span style="font-family:"jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;">
+                     </div></div>
+                    
+</div>
+<div id="LayoutDiv5">
+                    <p style="line-height:1.7; font-size: 25px; font-weight: 100; margin-top:70px; margin-bottom: 10px; padding-top:100px; padding-bottom: 0px; color:"#3FF"><span style="font-family:"jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;">
                         Dear early adopters,<br/>
-Please read this <a href="https://medium.com/the-preseed/673e2f36b5c" style="color:#9acbd9;" target="_blank">note</a> and <a href=" http://eepurl.com/QSN4D " STYLE="font-size:25px;font-weight: bold;font-style:italic;COLOR:#9acbd9" target="_blank">subscribe</a> to Preseed Projects launches and milestones achieved.<br><br><br>
-
-
-<div id="mc_embed_signup" style="
-          width:100%;
-          margin: 0 auto 0 auto;
-          text-align:center;
-          line-height:0%;">
-<div class="col-lg-4"></div><form action="http://preseed.us3.list-manage.com/subscribe/post?u=6d760d307e7d9e29e2344532b&amp;id=3e094bff50;" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="text-align:center;" novalidate>
-
-<form class="form-inline" role="form" >
-  <div class="input-group col-xs-4">
-  
- <input type="email" value="" class="form-control" name="EMAIL" id="mce-EMAIL" placeholder="Enter your EMAIL-ID" style="display:inline-block;">
-     <button type="submit" id="sendinvi" class="btn btn-default btn-info" style="display:inline-block;border-radius:40px;" onclick="message()">Send Invite</button>
-  </div>
-  <div>
-    <style type="text/css" scoped>
-      #sendinvi{
-        -webkit-transition: all 200ms;
-        -o-transition: all 200ms;
-        transition: all 200ms;
-      }
-      #sendinvi:hover{
-        -webkit-box-shadow: 0 0 10px #65E0A9;
-        box-shadow: 0 0 10px #65E0A9;
-      }
-    </style>
-  </div>
+Please read this <a href="https://medium.com/the-preseed/673e2f36b5c" style="color:#FF6;" target="_blank">note</a> and <a href=" http://eepurl.com/QSN4D " STYLE="font-size:25px;COLOR:#FF6" target="_blank">subscribe</a> to Preseed Projects launches and milestones achieved.<br></p>
+<div id="mc_embed_signup">
+<form action="//preseed.us3.list-manage.com/subscribe/post?u=6d760d307e7d9e29e2344532b&amp;id=3e094bff50" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_6d760d307e7d9e29e2344532b_3e094bff50" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
 </form>
-
-
-
-<br><br><br><br>We need a genius app marketer/distributor for Preseed Projects. Read more <a href="https://medium.com/p/55d39987d232" target="_blank" style="color:#9acbd9;">here</a> to apply</p>
+</div>
+<br><br><p style="font-size:25px; font-weight:100">We need a genius app marketer/distributor for Preseed Projects. Read more <a href="https://medium.com/p/55d39987d232" target="_blank" style="color:#FF6;">here</a> to <a href="https://applypreseed.typeform.com/to/lgRn7v" target="_blank" style="color:#FF6;">apply</p>
                      
 				 
-                </footer>
-                
-            </div>
-        </div>
-		
-        <script src="assets/bootstrap-transition.js"></script>
-  </div>
- </div>
-
+</div>
+</div>
 </body>
 </html>
